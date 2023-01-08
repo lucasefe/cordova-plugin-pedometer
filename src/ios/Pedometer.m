@@ -58,6 +58,8 @@
                     @"distance": [CMPedometer isDistanceAvailable] && pedometerData.distance ? pedometerData.distance : [NSNumber numberWithInt:0],
                     @"floorsAscended": [CMPedometer isFloorCountingAvailable] && pedometerData.floorsAscended ? pedometerData.floorsAscended : [NSNumber numberWithInt:0],
                     @"floorsDescended": [CMPedometer isFloorCountingAvailable] && pedometerData.floorsDescended ? pedometerData.floorsDescended : [NSNumber numberWithInt:0]
+                    @"currentCadence": [CMPedometer isStepCountingAvailable] && pedometerData.currentCadence ? pedometerData.currentCadence : [NSNumber numberWithInt:0]
+                    @"currentPace": [CMPedometer isStepCountingAvailable] && pedometerData.currentPace? pedometerData.currentPace: [NSNumber numberWithInt:0]
                 };
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:pedestrianData];
                 [pluginResult setKeepCallbackAsBool:true];
